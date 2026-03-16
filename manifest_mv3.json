@@ -1,23 +1,30 @@
 {
     "name": "No Reddit Image Viewer",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "manifest_version": 3,
     "description": "Disables Reddit's image viewer and uses the browser one instead",
-    "background":  {
-        "scripts": [ "background.js" ]
-    },
     "icons": {
         "48": "icon_48.png",
         "128": "icon_128.png"
     },
     "incognito": "spanning",
     "permissions": [
-        "webRequest",
-        "webRequestBlocking",
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
         "*://i.redd.it/*",
         "*://preview.redd.it/*",
         "*://external-preview.redd.it/*"
     ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "rules",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
     "browser_specific_settings": {
         "gecko": {
             "id": "{b64d91f6-bf0f-48fd-805c-1f8b9ff5cdb7}",

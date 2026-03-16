@@ -16,18 +16,21 @@ except FileExistsError:
 
 # MV2
 with zipfile.ZipFile(SCRIPT_DIR + "/packaged/no-reddit-image-viewer-mv2.zip", "w") as zipf:
-    for file in FILES:
-        zipf.write(file)
+    zipf.write("icon_48.png")
+    zipf.write("icon_128.png")
+    zipf.write("background.js")
     zipf.write("manifest_mv2.json", "manifest.json")
 
 # MV2 (Firefox pre-140)
 with zipfile.ZipFile(SCRIPT_DIR + "/packaged/no-reddit-image-viewer-mv2-firefox-pre140.zip", "w") as zipf:
-    for file in FILES:
-        zipf.write(file)
+    zipf.write("icon_48.png")
+    zipf.write("icon_128.png")
+    zipf.write("background.js")
     zipf.write("manifest_mv2_firefox_pre140.json", "manifest.json")
 
 # MV3
 with zipfile.ZipFile(SCRIPT_DIR + "/packaged/no-reddit-image-viewer-mv3.zip", "w") as zipf:
-    for file in FILES:
-        zipf.write(file)
+    zipf.write("icon_48.png")
+    zipf.write("icon_128.png")
+    zipf.write("rules.json")
     zipf.write("manifest_mv3.json", "manifest.json")

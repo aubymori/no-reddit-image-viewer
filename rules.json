@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "accept",
+                    "operation": "set",
+                    "value": "image/avif,*/*"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "||redd.it/",
+            "resourceTypes": ["main_frame"]
+        }
+    }
+]
