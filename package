@@ -20,6 +20,12 @@ with zipfile.ZipFile(SCRIPT_DIR + "/packaged/no-reddit-image-viewer-mv2.zip", "w
         zipf.write(file)
     zipf.write("manifest_mv2.json", "manifest.json")
 
+# MV2 (Firefox pre-140)
+with zipfile.ZipFile(SCRIPT_DIR + "/packaged/no-reddit-image-viewer-mv2-firefox-pre140.zip", "w") as zipf:
+    for file in FILES:
+        zipf.write(file)
+    zipf.write("manifest_mv2_firefox_pre140.json", "manifest.json")
+
 # MV3
 with zipfile.ZipFile(SCRIPT_DIR + "/packaged/no-reddit-image-viewer-mv3.zip", "w") as zipf:
     for file in FILES:

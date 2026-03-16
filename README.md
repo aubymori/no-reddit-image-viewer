@@ -21,7 +21,7 @@ in the `packaged` folder.
 4. Make sure "Developer Mode" is enabled in the top right.
 5. Drag the unzipped folder onto the page.
 
-### Firefox (or forks)
+### Firefox (or forks)*
 
 #### For debugging
 
@@ -31,7 +31,7 @@ in the `packaged` folder.
 3. Select "Load Temporary Add-on...".
 4. Select the previously obtained ZIP file. This will last only until you restart the browser.
 
-#### From ZIP file*
+#### From ZIP file**
 
 1. Get the Manifest v2 or v3 ZIP file, either from [Releases](https://github.com/aubymori/no-reddit-image-viewer/releases/latest)
    or your own locally built copy.
@@ -43,4 +43,6 @@ in the `packaged` folder.
 7. Select "Install Add-on From File...".
 8. Select the previously obtained ZIP file.
 
-*\*This method will only work on Firefox ESR, Dev Edition, Nightly, or forks.*.
+*\*\*This method will only work on Firefox ESR, Dev Edition, Nightly, or forks.*.
+
+*\*Before Firefox 140, you will need to use the `mv2-firefox-pre140` version.*
