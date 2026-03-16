@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+import zipfile
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+FILES = [
+    "background.js",
+    "icon_48.png",
+    "icon_128.png",
+]
+
+try:
+    os.mkdir(SCRIPT_DIR + "/packaged")
+except FileExistsError:
+    pass
+
+# MV2
+with zipfile.ZipFile(SCRIPT_DIR + "/packaged/no-reddit-image-viewer-mv2.zip", "w") as zipf:
+    for file in FILES:
+        zipf.write(file)
+    zipf.write("manifest_mv2.json", "manifest.json")
+
+# MV3
+with zipfile.ZipFile(SCRIPT_DIR + "/packaged/no-reddit-image-viewer-mv3.zip", "w") as zipf:
+    for file in FILES:
+        zipf.write(file)
+    zipf.write("manifest_mv3.json", "manifest.json")
